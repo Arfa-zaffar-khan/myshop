@@ -7,7 +7,7 @@ export default function ProductList({products}) {
         {products.map((product)=>{
            return <ProductCard key={product.id} id={product.id} title={product.title} description={product.description} price={product.price} rating={product.rating} thumbnail={product.thumbnail}/>
         })}
-        
     </div>
+    
   );
 }
