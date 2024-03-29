@@ -19,7 +19,7 @@ const menuItems = [
     },
 ]
 
-export default function Navigationbar() {
+export default function Navigationbar({handleSearch}) {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
     const toggleMenu = () => {
@@ -60,13 +60,10 @@ export default function Navigationbar() {
                         ))}
                     </ul>
                 </div>
-                <div className="hidden lg:block">
-                    <Search/>
+                <div className="block">
+                    <Search handleSearch={handleSearch}/>
                 </div>
-                <div className="lg:hidden ">
-                    <Search/>
-                </div>
-
+            
                 <div className="lg:hidden">
                     <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
                 </div>
